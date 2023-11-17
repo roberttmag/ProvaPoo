@@ -7,21 +7,19 @@ public class Main {
         Veiculo veiculo = new Veiculo("Toyota", "Yaris", 2022, 150.0);
         System.out.println(veiculo);
 
-        // Criar um carro
         Carro carro = new Carro("Toyota", "Corolla", 2023, 300.0);
         System.out.println(carro);
         
         CarroSedan sedan = new CarroSedan("Ford", "Fusion", 2020, 200.0);
         System.out.println(sedan);
 
-        //   diária do sedan com o acrescimo
+    
         sedan.setDiaria(200.0);
         System.out.println("Nova diária do sedan com 10%: " + String.format("%.2f R$", sedan.getPrecoDiaria()));
 
         CarroSuv suv = new CarroSuv("Jeep", "Renegade", 2021, 250.0);
         System.out.println(suv);
 
-        //  diária do SUV com o acrescimo
         suv.setDiaria(250.0);
         System.out.println("Nova diária do SUV com 50%: " + String.format("%.2f R$", suv.getPrecoDiaria()));
     
@@ -35,7 +33,6 @@ public class Main {
         System.out.println("Valor da locação do SUV: " + String.format("%.2f R$", locacaoSUV.calcularValorLocacao()));
         
         
-     // Exemplo de uso da classe Locacao com interação do usuário
         Scanner scanner = new Scanner(System.in);
         
         Locacao locacao = null;
@@ -48,7 +45,6 @@ public class Main {
             int escolhaVeiculo;
             int diasLocacao;
 
-            // Use a verificação de hasNextInt para garantir que o usuário forneça um número
             if (scanner.hasNextInt()) {
                 escolhaVeiculo = scanner.nextInt();
                 System.out.print("Dias da locação: ");
@@ -64,13 +60,11 @@ public class Main {
                         System.out.println("Opção inválida. Tente novamente.");
                     }
                 } else {
-                    // Se o usuário não fornecer um número para diasLocacao,  a entrada é inválida
                     scanner.next();
                     System.out.println("Opção inválida para dias da locação. Tente novamente.");
                 }
-            } else {
-                // Se o usuário não fornecer um número para escolhaVeiculo,  a entrada é inválida
-            	
+            } else 
+            
                 scanner.next();
                 System.out.println("Opção inválida para veículo. Tente novamente.");
             }
@@ -78,8 +72,6 @@ public class Main {
 
        
         System.out.println("\nValor da locação: " + String.format("%.2f R$", locacao.calcularValorLocacao()));
-
-        
    
         Veiculo veiculoEscolhido = locacao.getObjAluguel();
 
