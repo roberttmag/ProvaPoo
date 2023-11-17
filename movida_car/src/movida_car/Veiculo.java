@@ -6,7 +6,6 @@ public class Veiculo {
     private int ano;
     private double diaria;
 
-    // Construtor
     public Veiculo(String marca, String modelo, int ano, double diaria) {
         this.marca = marca;
         this.modelo = modelo;
@@ -36,7 +35,6 @@ public class Veiculo {
         this.diaria = valor;
     }
 
-    // toString para representação textual do objeto
     @Override
     public String toString() {
         return String.format("Carro Simples - Marca = %s , Modelo = %s, Ano = %d, Diaria = %.2f R$", marca, modelo, ano, diaria); 
